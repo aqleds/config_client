@@ -1,0 +1,1104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AqLeds</class>
+ <widget class="QMainWindow" name="AqLeds">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>691</width>
+    <height>519</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AqLeds</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1024</width>
+     <height>768</height>
+    </size>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QTabWidget" name="tabs">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tbStatus">
+         <attribute name="title">
+          <string>Status</string>
+         </attribute>
+         <widget class="QGroupBox" name="grChannel1Status">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>50</y>
+            <width>161</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Channel 1</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="1" column="3">
+            <widget class="QLabel" name="lbc1Volts">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>Volts: </string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>Current: </string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>Watts:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QLabel" name="lbc1Watts">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QLabel" name="lbc1Current">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QGroupBox" name="grChannel2Status">
+          <property name="geometry">
+           <rect>
+            <x>250</x>
+            <y>50</y>
+            <width>161</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Channel 2</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="1" column="3">
+            <widget class="QLabel" name="lbc2Volts">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>Volts: </string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_15">
+             <property name="text">
+              <string>Current: </string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_16">
+             <property name="text">
+              <string>Watts:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QLabel" name="lbc2Watts">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QLabel" name="lbc2Current">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QGroupBox" name="grChannel3Status">
+          <property name="geometry">
+           <rect>
+            <x>460</x>
+            <y>50</y>
+            <width>161</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Channel 3</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="1" column="3">
+            <widget class="QLabel" name="lbc3Volts">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_20">
+             <property name="text">
+              <string>Volts: </string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_21">
+             <property name="text">
+              <string>Current: </string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_22">
+             <property name="text">
+              <string>Watts:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QLabel" name="lbc3Watts">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QLabel" name="lbc3Current">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_9">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>180</y>
+            <width>371</width>
+            <height>211</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Time</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="1" column="1" colspan="3">
+            <widget class="QLabel" name="lbRTCTime">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_26">
+             <property name="text">
+              <string>RTC:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_27">
+             <property name="text">
+              <string>Moment:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QLabel" name="lbPlannerMoment">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QCheckBox" name="cbTurboMode">
+             <property name="text">
+              <string>Turbo Test Mode</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QLabel" name="label_9">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>30</y>
+            <width>121</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Firmware Version:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lbFirmwareVersion">
+          <property name="geometry">
+           <rect>
+            <x>520</x>
+            <y>30</y>
+            <width>62</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>02.00A</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btWriteConfig">
+          <property name="geometry">
+           <rect>
+            <x>429</x>
+            <y>190</y>
+            <width>201</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Write configuration</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btReloadConfig">
+          <property name="geometry">
+           <rect>
+            <x>430</x>
+            <y>230</y>
+            <width>201</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Reload configuration</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btExportConfig">
+          <property name="geometry">
+           <rect>
+            <x>430</x>
+            <y>270</y>
+            <width>201</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Export Configuration</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btImportConfig">
+          <property name="geometry">
+           <rect>
+            <x>430</x>
+            <y>310</y>
+            <width>201</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Import Configuration</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btSyncSystemTime">
+          <property name="geometry">
+           <rect>
+            <x>430</x>
+            <y>350</y>
+            <width>201</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Sync system time to AqLeds</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tbRamps">
+         <attribute name="title">
+          <string>Ramp Times</string>
+         </attribute>
+         <widget class="QWidget" name="formLayoutWidget_2">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>70</y>
+            <width>311</width>
+            <height>161</height>
+           </rect>
+          </property>
+          <layout class="QFormLayout" name="timetableLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="sunriseLabel">
+             <property name="text">
+              <string>SUNRISE</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="sunriseLineEdit">
+             <property name="inputMask">
+              <string>99:99;_</string>
+             </property>
+             <property name="text">
+              <string>06:00</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="dayLabel">
+             <property name="text">
+              <string>DAY</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="dayLineEdit">
+             <property name="inputMask">
+              <string>99:99;_</string>
+             </property>
+             <property name="text">
+              <string>09:00</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="sunsetLabel">
+             <property name="text">
+              <string>SUNSET</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="sunsetLineEdit">
+             <property name="inputMask">
+              <string>99:99;_</string>
+             </property>
+             <property name="text">
+              <string>21:00</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="nightLabel">
+             <property name="text">
+              <string>NIGHT</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="nightLineEdit">
+             <property name="inputMask">
+              <string>99:99;_</string>
+             </property>
+             <property name="text">
+              <string>22:00</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QPushButton" name="btRampTimesRestore">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>310</y>
+            <width>121</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&amp;Restore</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btRampTimesSend">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>310</y>
+            <width>121</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&amp;Send</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tbRampLevels">
+         <attribute name="title">
+          <string>Ramp Levels</string>
+         </attribute>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>10</y>
+            <width>621</width>
+            <height>321</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Channels and Levels</string>
+          </property>
+          <widget class="QRadioButton" name="rbChannel1">
+           <property name="geometry">
+            <rect>
+             <x>50</x>
+             <y>50</y>
+             <width>102</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Channel 1</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="rbChannel2">
+           <property name="geometry">
+            <rect>
+             <x>270</x>
+             <y>50</y>
+             <width>102</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Channel 2</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="rbChannel3">
+           <property name="geometry">
+            <rect>
+             <x>480</x>
+             <y>50</y>
+             <width>102</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Channel 3</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="gridLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>120</y>
+            <width>411</width>
+            <height>191</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <widget class="QSlider" name="slSunrise">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QSlider" name="slDay">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QSlider" name="slSunset">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QSlider" name="slNight">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="lbSunrise">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>SUNRISE</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="lbDay">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>DAY</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="lbSunset">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>SUNSET</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLabel" name="lbNight">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>NIGHT</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>330</y>
+            <width>621</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Global</string>
+          </property>
+          <widget class="QRadioButton" name="radioButton_11">
+           <property name="geometry">
+            <rect>
+             <x>220</x>
+             <y>60</y>
+             <width>102</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Channel 2</string>
+           </property>
+          </widget>
+          <widget class="QSlider" name="slGlobal">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>30</y>
+             <width>571</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>200</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tbVoltages">
+         <attribute name="title">
+          <string>Voltages</string>
+         </attribute>
+         <widget class="QGroupBox" name="grChannel1V">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>220</y>
+            <width>171</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Channel 1</string>
+          </property>
+          <widget class="QWidget" name="formLayoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>151</width>
+             <height>71</height>
+            </rect>
+           </property>
+           <layout class="QFormLayout" name="formLayout">
+            <item row="0" column="0">
+             <widget class="QLabel" name="ch0vminLabel">
+              <property name="text">
+               <string>Vmin</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="ch1vminLineEdit">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="inputMask">
+               <string>99.99;_</string>
+              </property>
+              <property name="text">
+               <string>00.00</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="ch0vmaxLabel">
+              <property name="text">
+               <string>Vmax</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="ch1vmaxLineEdit">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="inputMask">
+               <string>99.99;_</string>
+              </property>
+              <property name="text">
+               <string>01.00</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="grChannel3V">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>440</x>
+            <y>220</y>
+            <width>171</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Channel 3</string>
+          </property>
+          <widget class="QWidget" name="formLayoutWidget_4">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>151</width>
+             <height>71</height>
+            </rect>
+           </property>
+           <layout class="QFormLayout" name="formLayout_4">
+            <item row="0" column="0">
+             <widget class="QLabel" name="ch0vminLabel_4">
+              <property name="text">
+               <string>Vmin</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="ch3vminLineEdit">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="inputMask">
+               <string>99.99;_</string>
+              </property>
+              <property name="text">
+               <string>00.00</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="ch0vmaxLabel_4">
+              <property name="text">
+               <string>Vmax</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="ch3vmaxLineEdit">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="inputMask">
+               <string>99.99;_</string>
+              </property>
+              <property name="text">
+               <string>01.00</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="grChannel2V">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>230</x>
+            <y>220</y>
+            <width>171</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Channel 2</string>
+          </property>
+          <widget class="QWidget" name="formLayoutWidget_3">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>151</width>
+             <height>71</height>
+            </rect>
+           </property>
+           <layout class="QFormLayout" name="formLayout_3">
+            <item row="0" column="0">
+             <widget class="QLabel" name="ch0vminLabel_3">
+              <property name="text">
+               <string>Vmin</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="ch2vminLineEdit">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="inputMask">
+               <string>99.99;_</string>
+              </property>
+              <property name="text">
+               <string>00.00</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="ch0vmaxLabel_3">
+              <property name="text">
+               <string>Vmax</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="ch2vmaxLineEdit">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="inputMask">
+               <string>99.99;_</string>
+              </property>
+              <property name="text">
+               <string>01.00</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>0</y>
+            <width>581</width>
+            <height>211</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Disclaimer</string>
+          </property>
+          <widget class="QTextEdit" name="textDisclaimer">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>30</y>
+             <width>531</width>
+             <height>141</height>
+            </rect>
+           </property>
+           <property name="html">
+            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.Lucida Grande UI'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Lucida Grande';&quot;&gt;Before setting the values here, please, be sure that you understand what you're doing. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Lucida Grande';&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Lucida Grande';&quot;&gt;Wrong values would lead from non working led lamps, to &lt;/span&gt;&lt;span style=&quot; font-family:'Lucida Grande'; font-weight:600;&quot;&gt;broken lamps&lt;/span&gt;&lt;span style=&quot; font-family:'Lucida Grande';&quot;&gt;, not enough light, too much heat an wasted energy, or &lt;/span&gt;&lt;span style=&quot; font-family:'Lucida Grande'; font-weight:600;&quot;&gt;even fire&lt;/span&gt;&lt;span style=&quot; font-family:'Lucida Grande';&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Lucida Grande';&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Lucida Grande';&quot;&gt;If you're not sure, please ask a led expert. We won't accept any liability out of bad settings for your led lamps.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="textInteractionFlags">
+            <set>Qt::NoTextInteraction</set>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="cbIUnderstand">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>180</y>
+             <width>211</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>I Understand what I'm doing</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="btVoltagesRestore">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>350</y>
+            <width>121</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&amp;Restore</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btVoltagesSend">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>370</x>
+            <y>350</y>
+            <width>121</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&amp;Send</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>691</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionLoad_Config"/>
+    <addaction name="actionSave_Config"/>
+    <addaction name="separator"/>
+    <addaction name="actionExport_Config"/>
+    <addaction name="actionImport_Config"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuFirmware">
+    <property name="title">
+     <string>Firmware</string>
+    </property>
+    <addaction name="actionUpdate"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAqLeds_website"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuFirmware"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionLoad_Config">
+   <property name="text">
+    <string>Load Config</string>
+   </property>
+  </action>
+  <action name="actionSave_Config">
+   <property name="text">
+    <string>Reload Config</string>
+   </property>
+  </action>
+  <action name="actionUpdate">
+   <property name="text">
+    <string>Update</string>
+   </property>
+  </action>
+  <action name="actionAqLeds_website">
+   <property name="text">
+    <string>AqLeds website</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionExport_Config">
+   <property name="text">
+    <string>Export Config</string>
+   </property>
+  </action>
+  <action name="actionImport_Config">
+   <property name="text">
+    <string>Import Config</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
