@@ -1,4 +1,5 @@
-#include <QtGui/QApplication>
+#include <QCoreApplication>
+#include <QApplication>
 #include "aqleds.h"
 
 int main(int argc, char *argv[])

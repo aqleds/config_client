@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 include(qextserialport/src/qextserialport.pri)
-QT       += core gui network
+QT       += core gui network widgets
 
 TARGET = AqLed
 TEMPLATE = app
