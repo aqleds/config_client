@@ -2,6 +2,7 @@
 #define PROTOCOL_H
 
 #include <QObject>
+#include <QByteArray>
 #include "qextserialport.h"
 #include <stdint.h>
 
@@ -42,6 +43,10 @@ private:
 
     unsigned char crc16hi;
     unsigned char crc16lo;
+
+    QByteArray m_data;
+
+    int getChar(char *out_char);
 
     void crc16_init( void );
     void crc16_update_4_bits( unsigned char val );

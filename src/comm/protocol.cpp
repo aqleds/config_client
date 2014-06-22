@@ -108,6 +108,38 @@ int Protocol::sendPacket(uint8_t* data, int len)
     return m_port->write((const char*)buffer,p-buffer);
 
 }
+int Protocol::getChar(char *out_char)
+{
+    char in_char;
+
+    // if there is data availabe in the serial port buffer
+    // get it and add it to our internal buffer
+    if (m_port->bytesAvailable())
+    {
+        QByteArray tmp_data = m_port->readAll();
+        m_data.append(tmp_data);
+    }
+
+    // if we have no data in our internal buffer,
+    // try to get at least one byte
+    if (m_data.length()==0)
+    {
+
+        if(m_port->getChar(&in_char))
+        {
+            *out_char = in_char;
+            return 1;
+        }
+    }
+
+    if (m_data.length()>0)
+    {
+        *out_char = m_data.at(0);
+        m_data.remove(0,1);
+        return 1;
+    }
+    return -1;
+}
 
 int Protocol::recvPacket(uint8_t* data, int max_len)
 {
@@ -130,8 +162,8 @@ int Protocol::recvPacket(uint8_t* data, int max_len)
             return -1000;
         }
 
-        /* get a character or timeout and exit */
-        if (!m_port->getChar(&ch)) return 0;
+        /* get a character or exit */
+        if (this->getChar(&ch)<0) return 0;
 
         /* start of packet, set buffer pointer to 0 */
         if (ch==STX) { p=0; waiting_stx = false; continue;}
@@ -179,13 +211,17 @@ int Protocol::recvPacket(uint8_t* data, int max_len)
 
 void Protocol::clearRxQueue()
 {
-
+    m_data.clear();
+    if (m_port->bytesAvailable())
+    {
+        m_port->readAll();
+    }
 }
 
 int Protocol::sendCall(uint8_t *data, int len, uint8_t *rply, int max_len)
 {
     uint8_t rply_buffer[PROTOCOL_MAX_BUFFER];
-    int retries=3;
+    int retries=10;
 
     while (retries)
     {
@@ -228,12 +264,13 @@ int Protocol::sendCall(uint8_t *data, int len, uint8_t *rply, int max_len)
 
         }
         retries--;
+        //qDebug() << "RETRY..." <<retries;
     }
     return -5; // retry count exceeded
 }
 bool Protocol::connectToPort(QString port)
 {
-    PortSettings settings = {BAUD115200, DATA_8, PAR_NONE, STOP_1, FLOW_OFF, 500};
+    PortSettings settings = {BAUD115200, DATA_8, PAR_NONE, STOP_1, FLOW_OFF, 10};
     m_port = new QextSerialPort(port, settings, QextSerialPort::Polling);
 
     return m_port->open(QIODevice::ReadWrite);
