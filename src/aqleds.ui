@@ -1041,7 +1041,7 @@ p, li { white-space: pre-wrap; }
     <property name="title">
      <string>Firmware</string>
     </property>
-    <addaction name="actionUpdate"/>
+    <addaction name="menuActionUpdate"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -1072,7 +1072,7 @@ p, li { white-space: pre-wrap; }
     <string>Reload Config</string>
    </property>
   </action>
-  <action name="actionUpdate">
+  <action name="menuActionUpdate">
    <property name="text">
     <string>Update</string>
    </property>

@@ -9,6 +9,10 @@ Protocol::Protocol(QObject *parent) :
     m_state = ST_WAIT_STX;
 }
 
+QextSerialPort* Protocol::getPort()
+{
+    return m_port;
+}
 
 /* we use a tiny CRC16 that can work in 8 bit micro controllers */
 uint8_t crc16tab_hi[16] = {
@@ -225,7 +229,7 @@ int Protocol::sendCall(uint8_t *data, int len, uint8_t *rply, int max_len)
 
     while (retries)
     {
-        //qDebug() << "[sendCall " << (char)data[0] << (char)data[1] << data[2] <<"]";
+        qDebug() << "[sendCall " << (char)data[0] << (char)data[1] << data[2] <<"]";
         int send_result = sendPacket(data,len);
         if (send_result<0)
         {
@@ -233,14 +237,14 @@ int Protocol::sendCall(uint8_t *data, int len, uint8_t *rply, int max_len)
         }
 
         int recv_result = recvPacket(rply_buffer,PROTOCOL_MAX_BUFFER);
-        //qDebug() << "[sendCall recvResult=" << recv_result <<" ]";
+        qDebug() << "[sendCall recvResult=" << recv_result <<" ]";
         if (recv_result>2)
         {
             if ((data[0]==rply_buffer[0]) && // CMD
                 (data[1]==rply_buffer[1]) && // OP (read/write)
                     (rply_buffer[2]==ACK))
             {
-                //qDebug() << "[sendCall ACK OK]";
+                qDebug() << "[sendCall ACK OK]";
                 int payload_size = recv_result-3;
                 if (rply)
                 {
@@ -270,7 +274,7 @@ int Protocol::sendCall(uint8_t *data, int len, uint8_t *rply, int max_len)
 }
 bool Protocol::connectToPort(QString port)
 {
-    PortSettings settings = {BAUD115200, DATA_8, PAR_NONE, STOP_1, FLOW_OFF, 10};
+    PortSettings settings = {BAUD115200, DATA_8, PAR_NONE, STOP_1, FLOW_OFF, 100};
     m_port = new QextSerialPort(port, settings, QextSerialPort::Polling);
 
     return m_port->open(QIODevice::ReadWrite);

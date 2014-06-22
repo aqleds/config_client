@@ -15,6 +15,17 @@ AqLed::AqLed(QObject *parent) :
     m_timer.start();
 }
 
+
+Updater* AqLed::getUpdater()
+{
+    Updater *updater = NULL;
+    if (m_state == ST_CONNECTED)
+    {
+        updater = new Updater(protocol.getPort());
+    }
+    return updater;
+}
+
 void AqLed::fillKnownPorts()
 {
     m_known_ports.clear();
@@ -92,7 +103,7 @@ void AqLed::timerTimeout()
                 m_state=ST_DISCONNECTED;
                 protocol.disconnectFromPort();
                 emit disconnected();
-                //qDebug() << " NO PING, DISCONNECTED! ";
+                qDebug() << " NO PING, DISCONNECTED! ";
             }
             break;
         }

@@ -8,6 +8,7 @@
 #include <QStringList>
 
 #include "protocol.h"
+#include "updater.h"
 #include <stdint.h>
 
 #define OP_READ 'r'
@@ -113,7 +114,9 @@ public:
     bool reloadConfig();
 
     QString momentOfDayStr(int moment);
-     bool syncRTCToSystemTime();
+    bool syncRTCToSystemTime();
+
+    Updater* getUpdater();
 
 signals:
 

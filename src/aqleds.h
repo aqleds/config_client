@@ -52,8 +52,6 @@ private:
     void writeTurboMode();
     void readTurboMode();
 
-
-
 public slots:
 
     void connected(QString port_name);
@@ -92,7 +90,7 @@ public slots:
     void on_cbTurboMode_toggled();
 
     void on_btSyncSystemTime_clicked();
-
+    void on_menuActionUpdate_triggered();
 };
 
 #endif // AQLEDS_H

@@ -3,6 +3,7 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <QDateTime>
+#include <QFileDialog>
 
 AqLeds::AqLeds(QWidget *parent) :
     QMainWindow(parent),
@@ -566,6 +567,41 @@ bool AqLeds::readRampTimes()
 
     }
 }
+
+void AqLeds::on_menuActionUpdate_triggered()
+{
+    qDebug() << "UPDATE!";
+
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open AqLEDs firmware update"),
+                                                     "",
+                                                     tr("Files (*.aqf)"));
+
+    if (fileName.endsWith(".aqf"))
+    {
+        Updater *upd = m_device->getUpdater();
+        if (!upd)
+        {
+            QMessageBox::warning(NULL,
+                                 tr("The AqLeds is disconnected"),
+                                 tr("The AqLeds is disconnected, try again when it's connected")
+                          );
+            return;
+        }
+
+        if (!upd->readFile(fileName))
+        {
+            QMessageBox::warning(NULL,
+                                 tr("read error"),
+                                 tr("the file couldn't be read"));
+            delete upd;
+            return;
+        }
+
+        // PASS TO A PROGRESS DIALOG
+        upd->start();
+    }
+}
+
 
 
 

@@ -63,6 +63,7 @@ public:
     int sendPacket(uint8_t* data, int len);
     int recvPacket(uint8_t* data, int max_len);
     int sendCall(uint8_t* data, int len, uint8_t *rply=NULL, int max_len=0);
+    QextSerialPort* getPort();
 
 signals:
     
